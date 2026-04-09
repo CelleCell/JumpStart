@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpstart</title>
+    <link rel="stylesheet" href="SliderVariation2.css">
+    <link rel="stylesheet" href="JumpstartC.css">
+    <link rel="stylesheet" href="Chat3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caesar+Dressing&family=Open+Sans&family=Science+Gothic:wdth,wght@50..200,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="Images/Logos/UpscaledTransparentJumpStartLogoNoText.png">
+</head>
+<body>
+    <header class="HeadOfDoc">
+                    <img src="../JumpStartWebsite/Images/Logos/TempImageForDisplay.png">
+                    <h1>JumpStart Community Training Services Inc. </h1>
+                    
+        <div class="NavHeader">
+            <nav class="navbar">
+                <ul>
+                    <li><a id="LeftMostItem" href="index.html">Home</a></li>
+                    <li><a href="ProductionsPage.html">Production and Performing Arts</a></li>
+                    <li><a href="GalleryPage.html">Gallery</a></li>
+                    <li><a href="">Afterschool Program</a></li>
+                    <li><a href="">Support Group Program</a></li>
+                    <li><a href="">Food Pantry Services</a></li>
+                    <li><a href="">Security Soro Training</a></li>
+                    <li><a href="">Pre-GED</a></li>
+                    <li><a href="">DJ Lessons</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<Section>
+<div class="gallery-slider">
+  <div class="gallery-track">
+    <img src="Images/JumpStartYoungLadies.png" class="gallery-slide active">
+    <img src="Images/Karate.png" class="gallery-slide">
+    <img src="Images/HistoricalJumpStart.jpeg" class="gallery-slide">
+    <img src="Images/Blandish.png" class="gallery-slide">
+    <img src="Images/JustAGoodPic.png" class="gallery-slide">
+    <img src="Images/Studio.png" class="gallery-slide">
+  </div>
+
+  <!-- Arrows -->
+  <button class="gallery-prev">&#10094;</button>
+  <button class="gallery-next">&#10095;</button>
+</div>
+</Section>
+
+<section class="gallery-section">
+  <h1>Event Gallery</h1>
+  <p class="subtitle">Moments from our productions and community events</p>
+
+  <div class="gallery">
+    <img src="Images/JumpStartOutside.png" alt="Event 1">
+    <img src="images/JumpStartFoodDistrubtion.png" alt="Event 2">
+    <img src="images/BrotherBrother.JPG" alt="Event 3">
+    <img src="images/JumpstartBattleFest.png" alt="Event 4">
+    <img src="images/NANDBOYS.jpeg" alt="Event 5">
+    <img src="images/DanceGroupOutside.jpg" alt="Event 6">
+    <img src="images/Selfiewithteam.png" alt="Event 6">
+    <img src="images/BlandAtEventWithImportantPerson.jpeg" alt="Event 7">
+    <img src="images/March.png" alt="Event 8">
+    <img src="images/IMG_7487.jpeg" alt="Event 9">
+    
+  </div>
+
+  <div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+</section>
+
+<!---------------------------------------------------------------------Java Script-->
+<script>
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = () => {
+  lightbox.style.display = "none";
+};
+</script>
+
+
+<script>
+let galleryIndex = 0;
+
+const gallerySlides = document.querySelectorAll(".gallery-slide");
+const galleryTrack = document.querySelector(".gallery-track");
+
+function updateGallerySlide() {
+  galleryTrack.style.transform = `translateX(-${galleryIndex * 100}%)`;
+}
+
+function nextGallerySlide() {
+  galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+  updateGallerySlide();
+}
+
+function prevGallerySlide() {
+  galleryIndex = (galleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+  updateGallerySlide();
+}
+
+document.querySelector(".gallery-next").onclick = nextGallerySlide;
+document.querySelector(".gallery-prev").onclick = prevGallerySlide;
+
+setInterval(nextGallerySlide, 4000);
+</script>
