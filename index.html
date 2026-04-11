@@ -17,6 +17,7 @@
                     <h1>JumpStart Community Training Services Inc. </h1>
                     
         <div class="NavHeader">
+          <button class="menu-toggle">☰</button>
             <nav class="navbar">
                 <ul>
                     <li><a id="LeftMostItem" href="">Home</a></li>
@@ -133,3 +134,12 @@
     </footer>
 </body>
 </html>
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".navbar ul");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+</script>

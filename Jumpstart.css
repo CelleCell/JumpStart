@@ -1,0 +1,144 @@
+@font-face { /* Font Face Rule, used for downloaded fonts */
+    src: url(../TutorialWebsite/Fonts/Bangers-Regular.ttf);
+    font-family: Bangers;
+}
+
+
+.science-gothic- Goth {
+  font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 125,
+    "CTRS" 0;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #FAF3E0;
+    /* background-color: black; */
+    display: flow-root;
+}
+
+.HeadOfDoc {
+    background-color: #b4b2b2;
+    border: solid 3px black;
+    display: block;
+}
+
+.HeadOfDoc h1{
+    text-align: center;
+    font-family: "Science Gothic";
+    margin-top: 0px;
+    padding-top: 2%;
+    padding-bottom: 0px;
+    font-size: 55px;
+    width: 100%;
+    
+}
+
+.HeadOfDoc img{
+    width: 250px;
+    height: auto;
+}
+.navbar{
+    padding-left: 0;
+}
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: rgba(255, 255, 255, 0.863);
+    font-family: "Bangers";
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 15px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background:rgba(0, 0, 0, 0.895);
+  transition: width 0.2s ease-out;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.navbar a:hover {
+    font-size:21px;
+    color: rgba(255, 255, 255, 0.959);
+}
+
+
+
+/*
+.navbar a:hover{
+    background-color: #898888;
+}
+*/
+
+/*
+.navbar li a {
+    transition: all 0.3s ease 0s;
+}
+*/
+img {
+    height: 150px;
+    width: 170px;
+    float: left;
+}
+
+.navbar li{
+    float: left;
+}
+
+#IntroVid{
+    display: flex;
+    justify-content: center;
+}
+
+.MidSection {
+    margin-left: 0%;
+    margin-right: 0%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.MidSection {
+  background-color: rgb(255, 252, 252);
+ /* border: solid 1px black; */
+  padding: 1rem;
+  width: 100%;
+}
+
+.MidSection p{
+    font-size: 25px;
+    text-align: center;
+    width: 1200px;
+    margin-left: 19%;
+}
+
+video{
+    display: block;
+    margin: 0 auto;
+}
