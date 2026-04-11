@@ -21,6 +21,9 @@
   .projects {
     grid-template-columns: 1fr 1fr;
   }
+  .card-content p{
+    font-size: 10px;
+}
 }
 
 /* Desktop */
