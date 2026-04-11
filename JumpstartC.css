@@ -213,6 +213,18 @@ video{
 /* MOBILE */
 @media (max-width: 768px) {
 
+        .HeadOfDoc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     .menu-toggle {
         display: block;
         margin: 10px;
@@ -234,7 +246,12 @@ video{
         padding: 10px 0;
     }
 
-    h1{
-        font-size: 40px;
+    .HeadOfDoc h1{
+        font-size: 20px;
     }
+
+   .HeadOfDoc img{
+    width: 100px;
+    height: auto;
+   }
 }
