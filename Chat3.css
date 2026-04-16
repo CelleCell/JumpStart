@@ -36,9 +36,10 @@
 }
 
 .lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 90%; /* makes it feel bigger */
 }
 
 .close {

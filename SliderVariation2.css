@@ -45,7 +45,7 @@ body {
 /* RIGHT SIDE CONTENT PANEL */
 .slide-content {
   flex: 1;                   /* ~1/3 of width */
-  background: rgb(187, 8, 214);                               /* #b30f0f;       red panel like YMCA */
+  background: rgb(3, 193, 149);                              /* #b30f0f;       red panel like YMCA */
   color: #fff;
   padding: 80px 60px;
   display: flex;
@@ -59,11 +59,15 @@ body {
 }
 
 #two{
-  background: #d79e01;
+  background:rgb(187, 8, 214);
 }
 
 #four {
   background-color: #83b34f;
+}
+
+#five {
+   background: #d79e01;
 }
 .slide-content h2 {
   font-size: 2.8rem;
